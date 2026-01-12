@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunita's Portfolio - Cabin Crew & HR Student</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+        }
+        .nav-links li {
+            margin-left: 20px;
+        }
+        .nav-links a {
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #3498db;
+        }
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #2c3e50;
+        }
+
+        /* Home Section */
+        #home {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-align: center;
+            padding: 200px 20px;
+        }
+        #home h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        #home p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* About Section */
+        #about {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        #about img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        #about .content {
+            flex: 1;
+        }
+
+        /* Skills Section */
+        #skills {
+            background-color: #ecf0f1;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .skill-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .skill-item i {
+            font-size: 2rem;
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+
+        /* Education Section */
+        #education {
+            background-color: #fff;
+        }
+        .education-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-left: 5px solid #3498db;
+            background-color: #f9f9f9;
+        }
+
+        /* Cabin Crew Section */
+        #cabin-crew {
+            background-color: #ecf0f1;
+        }
+        .crew-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .crew-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #2c3e50;
+            color: #fff;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+        }
+        textarea {
+            height: 150px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #34495e;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #2c3e50;
+                padding: 20px;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .hamburger {
+                display: block;
+            }
+            #about {
+                flex-direction: column;
+                text-align: center;
+            }
+            #home h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Sunita's Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#cabin-crew">Cabin Crew</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hi, I'm Sunita, a dedicated Cabin Crew and HR Student passionate about aviation and human resources.</p>
+        <a href="#about" class="btn">Learn More</a>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="https://via.placeholder.com/200" alt="Sunita's Photo">
+        <div class="content">
+            <p>Hello! I'm Sunita, a motivated individual pursuing a career in cabin crew services while studying Human Resources. With a passion for customer service and team management, I aim to combine my aviation interests with HR expertise to create positive experiences in the skies and on the ground.</p>
+            <p>My journey began with a love for travel and helping others, leading me to train as a cabin crew member. Simultaneously, I'm building a strong foundation in HR to understand the dynamics of workforce management.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <i class="fas fa-plane"></i>
+                <h3>Cabin Crew Training</h3>
+                <p>Certified in safety procedures, emergency response, and passenger care.</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-users"></i>
+                <h3>HR Knowledge</h3>
+                <p>Understanding of recruitment, employee relations, and organizational behavior.</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-language"></i>
+                <h3>Communication</h3>
+                <p>Fluent in English and Hindi; excellent interpersonal and public speaking skills.</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-first-aid"></i>
+                <h3>First Aid</h3>
+                <p>Trained in basic first aid and CPR for emergency situations.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-item">
+            <h3>Bachelor of Arts in Human Resources</h3>
+            <p>University Name, Expected Graduation: 2025</p>
+            <p>Focus on HR management, labor laws, and organizational development.</p>
+        </div>
+        <div class="education-item">
+            <h3>Cabin Crew Certification</h3>
+            <p>Aviation Training Institute, 2023</p>
+            <p>Comprehensive training in aviation safety, customer service, and in-flight procedures.</p>
+        </div>
+    </section>
+
+    <section id="cabin-crew">
+        <h2>Cabin Crew Experience</h2>
+        <div class="crew-grid">
+            <div class="crew-item">
+                <h3>Internship at Airline X</h3>
+                <p>Assisted in passenger boarding, safety demonstrations, and onboard service during training flights.</p>
+            </div>
+            <div class="crew-item">
+                <h3>Volunteer Work</h3>
+                <p>Participated in aviation outreach programs, educating youth about careers in aviation.</p>
+            </div>
+            <div class="crew-item">
+                <h3>Skills Application</h3>
+                <p>Applied HR principles in team coordination and conflict resolution during simulated scenarios.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Sunita's Portfolio. All rights reserved.</p>
+        <p>Follow me on <a href="#"><i class="fab fa-linkedin"></i></a> <a href="#"><i class="fab fa-twitter"></i></a></p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
