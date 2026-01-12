@@ -1,0 +1,165 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: #007bff; /* Airline blue */
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+nav h1 {
+    font-size: 1.5rem;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav ul li {
+    margin-left: 2rem;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #cce7ff;
+}
+.hero {
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+.hero p {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+}
+.about, .why-aviation, .skills, .education, .contact {
+    margin-bottom: 4rem;
+}
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #007bff;
+    text-align: center;
+}
+.about p, .why-aviation p {
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+.skill {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 200px;
+}
+.skill i {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+.education ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+.education li {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contact {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.contact a {
+    color: #cce7ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide nav on mobile for simplicity; can add hamburger later */
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1.2rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill {
+        width: 100%;
+        max-width: 300px;
+    }
+}
